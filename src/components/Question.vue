@@ -1,8 +1,20 @@
 <template>
-  <div class="question">
-    <h1>{{ msg }}</h1>
-    <input class="question-title-input" placeholder="Ask an intervue question"></input>
-    <input class="question-body-input" placeholder="Tell me about this question of yours"></input>
+  <div class="header">
+    <h1>{{ title }}</h1>
+    <div class="question">
+      <input
+        type="text"
+        class="question-title-input"
+        placeholder="Ask an intervue question"
+        v-model="questions.questionTitle"
+        />
+      <input
+        type="text"
+        class="question-body-input"
+        placeholder="Tell me about this question of yours"
+        v-model="questions.questionBody"
+        />
+    </div>
   </div>
 </template>
 
@@ -11,30 +23,33 @@ export default {
   name: 'Question',
   data () {
     return {
-      msg: 'interVue'
+      title: 'interVue',
+      questions: {
+        questionTitle: '',
+        questionBody: '',
+      },
     }
   }
 }
 </script>
 
 <style scoped>
-h1 {
-  font-weight: normal;
-}
+  h1 {
+    font-weight: normal;
+  }
 
-.question-title-input, .question-body-input {
-  width: 60%;
-  min-width: 200px;
-  height: 5vh;
-  margin: 1%;
-  border-radius: 4px;
-  border: solid #2c3e50 1px;
-}
+  .question-title-input, .question-body-input {
+    width: 60%;
+    min-width: 200px;
+    height: 5vh;
+    margin: 1%;
+    border-radius: 4px;
+    border: solid #2c3e50 1px;
+  }
 
-input::placeholder {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  font-size: 20px;
-  padding-left: 10px;
-}
-
+  input::placeholder {
+    font-family: 'Avenir', Helvetica, Arial, sans-serif;
+    font-size: 20px;
+    padding-left: 10px;
+  }
 </style>
