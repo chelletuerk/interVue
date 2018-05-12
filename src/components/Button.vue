@@ -23,6 +23,6 @@
 
   .button:hover {
     background-color: gray;
-    color: white; 
+    color: white;
   }
 </style>
