@@ -13,17 +13,17 @@ describe('Question.vue', () => {
 
   it('correctly sets the message when created', () => {
      const vm = new Vue(App).$mount()
-     expect(vm.title).toBe('interVue')
+     expect(vm.appTitle).toBe('interVue')
    })
 
   it('correctly sets the message when created', () => {
      const vm = new Vue(Question).$mount()
-     expect(vm.question.questionTitle).toBe('')
+     expect(vm.title).toBe('')
    })
 
   it('correctly sets the message when created', () => {
      const vm = new Vue(Question).$mount()
-     expect(vm.question.questionBody).toBe('')
+     expect(vm.body).toBe('')
    })
 })
 

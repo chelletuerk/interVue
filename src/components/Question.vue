@@ -1,37 +1,43 @@
 <template>
   <div class="header">
-    <h1>{{ title }}</h1>
+    <h1>{{ appTitle }}</h1>
     <div class="question">
       <input
         type="text"
-        class="question-title-input"
+        class="title-input"
         placeholder="Ask an intervue question"
-        v-model="question.questionTitle"
+        v-model="title"
         />
       <input
         type="text"
-        class="question-body-input"
+        class="body-input"
         placeholder="Tell me about this question of yours"
-        v-model="question.questionBody"
+        v-model="body"
         />
+      <div class="submit-wrapper">
+        <Button
+          v-on:submit="submit(title, body)"
+        />
+      </div>
     </div>
   </div>
 </template>
 
 <script>
+import Button from './Button'
+
 export default {
-  props: {
-    title: {
-      type: String
-    }
-  },
+  props: ['appTitle', 'submit'],
   name: 'Question',
+  components: {
+    Button
+  },
+  methods: {
+  },
   data () {
     return {
-      question: {
-        questionTitle: '',
-        questionBody: '',
-      }
+      title: '',
+      body: '',
     }
   }
 }
@@ -42,7 +48,7 @@ export default {
     font-weight: normal;
   }
 
-  .question-title-input, .question-body-input {
+  .title-input, .body-input {
     width: 60%;
     min-width: 200px;
     height: 5vh;

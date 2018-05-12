@@ -1,23 +1,29 @@
 <template>
   <div id="app">
-    <Question v-bind:title="title"/>
-    <Button v-on:addQuestion/>
+    <Question
+      v-bind:submit="submit"
+      v-bind:appTitle="appTitle"
+    />
   </div>
 </template>
 
 <script>
 import Question from './components/Question'
-import Button from './components/Button'
 
 export default {
   name: 'App',
   components: {
     Question,
-    Button
+  },
+  methods: {
+    submit(title, body) {
+      this.questions.push({title, body})
+    }
   },
   data() {
     return {
-      title: 'interVue'
+      appTitle: 'interVue',
+      questions: [],
     }
   }
 }

@@ -1,7 +1,7 @@
 <template>
   <button
     class="button"
-    v-on:click="addQuestion"
+    v-on:click="$emit('submit')"
     >{{ msg }}
   </button>
 </template>
@@ -14,11 +14,6 @@
         msg: 'Submit'
       }
     },
-    methods: {
-      addQuestion: function() {
-        this.$emit('addQuestion', alert('yay2'))
-      }
-    }
   }
 
 </script>
