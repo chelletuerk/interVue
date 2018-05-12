@@ -1,7 +1,7 @@
 <template>
   <div id="app">
-    <Question/>
-    <Button/>
+    <Question v-bind:title="title"/>
+    <Button v-on:addQuestion/>
   </div>
 </template>
 
@@ -14,6 +14,11 @@ export default {
   components: {
     Question,
     Button
+  },
+  data() {
+    return {
+      title: 'interVue'
+    }
   }
 }
 </script>

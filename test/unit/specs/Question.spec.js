@@ -1,28 +1,29 @@
 import Vue from 'vue'
 import Question from '@/components/Question'
 import Button from '@/components/Button'
+import App from '@/App'
 
 describe('Question.vue', () => {
   it('should render correct contents', () => {
-    const Constructor = Vue.extend(Question)
+    const Constructor = Vue.extend(App)
     const vm = new Constructor().$mount()
     expect(vm.$el.querySelector('.header h1').textContent)
       .toEqual('interVue')
   })
 
   it('correctly sets the message when created', () => {
-     const vm = new Vue(Question).$mount()
+     const vm = new Vue(App).$mount()
      expect(vm.title).toBe('interVue')
    })
 
   it('correctly sets the message when created', () => {
      const vm = new Vue(Question).$mount()
-     expect(vm.questions.questionTitle).toBe('')
+     expect(vm.question.questionTitle).toBe('')
    })
 
   it('correctly sets the message when created', () => {
      const vm = new Vue(Question).$mount()
-     expect(vm.questions.questionBody).toBe('')
+     expect(vm.question.questionBody).toBe('')
    })
 })
 
