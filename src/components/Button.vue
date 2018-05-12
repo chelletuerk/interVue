@@ -16,7 +16,7 @@
     },
     methods: {
       addQuestion: function() {
-        this.$emit('addQuestion', alert('yay2'))
+        this.$emit('addQuestion')
       }
     }
   }

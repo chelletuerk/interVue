@@ -6,13 +6,13 @@
         type="text"
         class="question-title-input"
         placeholder="Ask an intervue question"
-        v-model="question.questionTitle"
+        v-model="questionTitle"
         />
       <input
         type="text"
         class="question-body-input"
         placeholder="Tell me about this question of yours"
-        v-model="question.questionBody"
+        v-model="questionBody"
         />
     </div>
   </div>
@@ -20,18 +20,12 @@
 
 <script>
 export default {
-  props: {
-    title: {
-      type: String
-    }
-  },
+  props: ['title'],
   name: 'Question',
   data () {
     return {
-      question: {
-        questionTitle: '',
-        questionBody: '',
-      }
+      questionTitle: '',
+      questionBody: '',
     }
   }
 }
