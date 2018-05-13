@@ -1,7 +1,7 @@
 <template>
   <div>
     <div
-      class="display"
+      class="display animated fadeInRight"
       v-for="question in questions"
       :key="question.title">
         <u><b>Question</b></u>: {{ question.title }} <br/>
