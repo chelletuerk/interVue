@@ -20,6 +20,9 @@ import Vue from 'vue'
 
 <style scoped>
   .display {
+    background: linear-gradient(to top left, #ff1493, lightgray);
+    font-family: 'Avenir', Helvetica, Arial, sans-serif;
+    color: #2c3e50;
     height: 100px;
     width: 35%;
     min-width: 240px;
