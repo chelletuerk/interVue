@@ -55,12 +55,15 @@ export default {
   }
 
   .title-input, .body-input {
-    width: 60%;
-    min-width: 200px;
+    width: 50%;
+    min-width: 330px;
     height: 5vh;
     margin: 1%;
     border-radius: 4px;
     border: solid #2c3e50 1px;
+    -webkit-box-shadow: 9px 10px 36px -9px rgba(0,0,0,0.42);
+    -moz-box-shadow: 9px 10px 36px -9px rgba(0,0,0,0.42);
+    box-shadow: 9px 10px 36px -9px rgba(0,0,0,0.42);
   }
 
   input::placeholder {
