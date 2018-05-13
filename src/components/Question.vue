@@ -16,7 +16,7 @@
         />
       <div class="submit-wrapper">
         <Button
-          v-on:submit="submit(title, body)"
+          v-on:submit="eventHandler"
         />
       </div>
     </div>
@@ -33,6 +33,12 @@ export default {
     Button
   },
   methods: {
+    eventHandler() {
+      console.log(this)
+      this.submit(this.title, this.body)
+      this.title = ''
+      this.body = ''
+    }
   },
   data () {
     return {
