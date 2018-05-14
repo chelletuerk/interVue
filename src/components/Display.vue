@@ -1,21 +1,22 @@
 <template>
   <div>
     <div
-      class="display animated fadeInRight"
+      class="display animated flipInX"
       v-for="question in questions"
       :key="question.title">
-        <u><b>Question</b></u>: {{ question.title }} <br/>
-        <u><b>Description</b></u>: {{ question.body }}
+        <div><span class="titleObj">Question</span>: {{ question.title }}</div>
+        <div><span class="bodyObj">Description</span>: {{ question.body }}</div>
+        <div><span class="urlObj">Url</span>:<a :href="question.sidebarVal"  target="_blank"> {{ question.sidebarVal }}</a></div>
     </div>
   </div>
 </template>
 <script>
 import Vue from 'vue'
 
-  export default {
-    props: ['questions'],
-    name: 'Display',
-  }
+export default {
+  props: ['questions'],
+  name: 'Display',
+}
 </script>
 
 <style scoped>
@@ -39,6 +40,12 @@ import Vue from 'vue'
     word-wrap: break-word;
     overflow-y: scroll;
     line-height: 2;
+  }
+
+  .titleObj, .bodyObj, .urlObj {
+    text-decoration: underline;
+    font-family: 'Avenir', Helvetica, Arial, sans-serif;
+    font-size: 15px;
   }
 
 </style>

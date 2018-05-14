@@ -11,6 +11,8 @@
 <script>
 import Question from './components/Question'
 import Display from './components/Display'
+console.log(this.sidebarVal)
+
 
 export default {
   name: 'App',
@@ -20,7 +22,9 @@ export default {
   },
   methods: {
     submit(title, body) {
-      this.questions.push({title, body})
+      const $sidebar = $('#url')
+      this.questions.push({title, body, sidebarVal: $sidebar.val()})
+      $sidebar.val('')
     }
   },
   data() {
