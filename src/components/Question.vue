@@ -34,11 +34,10 @@ export default {
   },
   methods: {
     eventHandler() {
-      console.log(this)
       this.submit(this.title, this.body)
       this.title = ''
       this.body = ''
-    }
+    },
   },
   data () {
     return {
@@ -74,5 +73,10 @@ export default {
     font-family: 'Avenir', Helvetica, Arial, sans-serif;
     font-size: 20px;
     padding-left: 10px;
+  }
+
+  input[type="text"] {
+    font-family: 'Avenir', Helvetica, Arial, sans-serif;
+    font-size: 20px;
   }
 </style>
