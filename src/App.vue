@@ -11,8 +11,6 @@
 <script>
 import Question from './components/Question'
 import Display from './components/Display'
-console.log(this.sidebarVal)
-
 
 export default {
   name: 'App',
