@@ -27,7 +27,7 @@
 import Button from './Button'
 
 export default {
-  props: ['appTitle', 'submit'],
+  props: ['appTitle', 'submit', 'fetchApiQuestions', 'fetchApiUrl'],
   name: 'Question',
   components: {
     Button
@@ -35,6 +35,8 @@ export default {
   methods: {
     eventHandler() {
       this.submit(this.title, this.body)
+      this.fetchApiQuestions()
+      this.fetchApiUrl()
       this.title = ''
       this.body = ''
     },
@@ -43,6 +45,8 @@ export default {
     return {
       title: '',
       body: '',
+      apiQuestions: '',
+      apiUrl: '',
     }
   }
 }
